@@ -1,0 +1,12 @@
+{% extends "_base.html" %}
+
+{% block body %}
+  <h1>Coquito.io</h1>
+  <ul>
+    {% for post in posts %}
+      <li>
+        <a href="/{{post.slug}}">{{post.meta.title}}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
