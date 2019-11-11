@@ -107,6 +107,20 @@ a:hover {
   padding: 2rem;
 }
 
+.header {
+  margin-bottom: 3rem;
+}
+
+.header-title,
+.header-subtitle {
+  margin-bottom: 0;
+}
+
+.header-subtitle {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
 .post-header {
   border-bottom: 1px solid #efefef;
   margin-bottom: 2rem;
@@ -127,5 +141,4 @@ a:hover {
 .post-header-subtitle {
   font-size: 1.2em;
   margin-top: 0.5rem;
-  opacity: 0.5;
 }

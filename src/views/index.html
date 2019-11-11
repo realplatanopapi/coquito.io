@@ -1,7 +1,10 @@
 {% extends "../static/dist/_base.html" %}
 
 {% block body %}
-  <h1>Coquito.io</h1>
+  <header class="header">
+    <h1 class="header-title">coquito.io</h1>
+    <p class="header-subtitle">A blog by <a href="https://mariopabon.com">Mario Pabon</a> (aka <a href="https://twitter.com/realplatanopapi">@realplatanopapi</a>) on the human aspects of building products.</p>
+  </header>
   <ul>
     {% for post in posts %}
       <li>
