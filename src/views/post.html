@@ -1,8 +1,12 @@
 {% extends "../static/dist/_base.html" %}
 
 {% block body %}
-  <h1>{{post.meta.title }}</h1>
-  {{post.content|safe}}
+  <article>
+    <header>
+      <h1>{{post.meta.title }}</h1>
+    </header>
+    {{post.content|safe}}
+  </article>
   <footer>
     <a href="/">View more posts</a>
   </footer>
