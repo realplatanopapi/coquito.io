@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const start = require('../src')
 
-const port = 8080
+const port = process.env.PORT || 1234
 start().then(app => {
   app.listen(port, () => {
     console.log(`Listening on port ${port} 🍾`)
