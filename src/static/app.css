@@ -85,6 +85,20 @@ h3 {
   font-size: 1.2em;
 }
 
+a {
+  border-bottom: 1px solid currentColor;
+  color: inherit;
+  display: inline-block;
+  padding-bottom: 2px;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom-color: var(--mint-green);
+  border-bottom-width: 3px;
+  padding-bottom: 0;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
