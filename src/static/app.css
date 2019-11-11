@@ -1,3 +1,16 @@
+:root {
+  --mango-red: rgb(255, 75, 50);
+  --mango-orange: rgb(255, 200, 0);
+  --mango-green: rgb(150, 225, 25);
+  --mint-green: rgb(25, 207, 125);
+}
+
+::selection {
+  background-color: var(--mint-green);
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+
 *,
 *:before,
 *:after {
@@ -11,8 +24,9 @@ body {
 }
 
 html {
+  background: #fff;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: '-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-size: 100%;
   line-height: 1.618;
 }
@@ -26,8 +40,41 @@ h1, h2, h3 {
   line-height: 1;
 }
 
+@keyframes mangoDreams {
+  0% {
+    background-position: 0vw 50%;
+  }
+
+  100% {
+    background-position: 200vw 50%;
+  }
+}
+
 h1 {
   font-size: 2.618em;
+
+  animation: mangoDreams ease-in infinite 20s;
+  background-image: linear-gradient(
+    to right,
+    var(--mango-red),
+    var(--mango-orange) 5%,
+    var(--mango-green) 30%,
+    var(--mango-orange),
+    var(--mango-red),
+    var(--mango-orange),
+    var(--mango-green),
+    var(--mango-orange),
+    var(--mango-red)
+  );
+  background-size: 200vw 100%;
+  font-style: italic;
+  line-height: 1.25;
+  padding-bottom: 0.1em;
+
+  /* Enable see-through text so we can see the tasty gradient background */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h2 {
