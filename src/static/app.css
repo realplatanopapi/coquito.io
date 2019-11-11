@@ -151,7 +151,46 @@ a:hover {
   position: fixed;
 }
 
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container,
+.header,
+.post-header {
+  animation: ease-out 0.5s;
+  animation-fill-mode: both;
+}
+
+.header,
+.post-header {
+  animation-name: slideInDown;
+  animation-delay: 0.25s;
+}
+
 .container {
+  animation-name: slideInUp;
+  animation-delay: 0.125s;
   margin-left: auto;
   margin-right: auto;
   max-width: 40rem;
