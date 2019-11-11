@@ -4,12 +4,12 @@
   <article>
     <header class="post-header">
       <h1 class="post-header-title">{{post.meta.title }}</h1>
-      <p class="post-header-date">
-        <time>{{ post.meta.date }}</time>
-      </p>
       {% if post.meta.subtitle %}
         <p class="post-header-subtitle">{{ post.meta.subtitle }}</p>
       {% endif %}
+      <p class="post-header-date">
+        <time datetime="{{ post.meta.date }}">{{ post.meta.dateFormatted }}</time>
+      </p>
     </header>
     {{post.content|safe}}
   </article>

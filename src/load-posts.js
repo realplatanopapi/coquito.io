@@ -2,6 +2,7 @@ const path = require('path')
 const fs = require('fs')
 const {promisify} = require('util')
 
+const dateFns = require('date-fns')
 const frontMatter = require('front-matter')
 const globby = require('globby')
 const marked = require('marked')
@@ -25,9 +26,13 @@ module.exports = async function loadPosts () {
   return await Promise.all(paths.map(async postPath => {
     const content = await readFile(postPath, 'utf-8')
     const {attributes, body} = frontMatter(content)
+    const dateFormatted = dateFns.format(attributes.date, 'MMMM dd, yyyy')
     return {
       content: marked(body),
-      meta: attributes,
+      meta: {
+        ...attributes,
+        dateFormatted,
+      },
       slug: createPostSlug(postPath)
     }
   }))

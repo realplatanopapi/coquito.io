@@ -111,6 +111,7 @@ h3 {
 }
 
 .post-header-subtitle {
-  margin-top: 1rem;
+  font-size: 1.2em;
+  margin-top: 0.5rem;
   opacity: 0.5;
 }
