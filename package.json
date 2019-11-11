@@ -1,9 +1,12 @@
 {
   "private": true,
   "scripts": {
+    "build": "NODE_ENV=production yarn build/client",
+    "build/client": "parcel build src/static/_base.html -d src/static/dist",
     "dev": "concurrently 'yarn dev/server' 'yarn dev/static'",
     "dev/server": "node-dev ./bin/start",
-    "dev/static": "parcel watch src/static/_base.html -d src/static/dist"
+    "dev/static": "parcel watch src/static/_base.html -d src/static/dist",
+    "start": "./bin/start"
   },
   "dependencies": {
     "date-fns": "^2.7.0",
