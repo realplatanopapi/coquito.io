@@ -92,3 +92,25 @@ h3 {
   max-width: 40rem;
   padding: 2rem;
 }
+
+.post-header {
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+}
+
+.post-header-title,
+.post-header-date,
+.post-header-subtitle {
+  margin-bottom: 0;
+}
+
+.post-header-date {
+  margin-top: 1em;
+  opacity: 0.5;
+}
+
+.post-header-subtitle {
+  margin-top: 1rem;
+  opacity: 0.5;
+}
