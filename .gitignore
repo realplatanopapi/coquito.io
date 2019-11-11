@@ -1,6 +1,6 @@
 .cache
 node_modules
-src/static/dist
+public
 
 .DS_Store
 package-lock.json

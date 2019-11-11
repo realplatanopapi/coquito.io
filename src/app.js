@@ -18,7 +18,7 @@ module.exports = async function start ({
 
   const viewsPaths = [
     path.join(__dirname, 'views'),
-    path.join(__dirname, 'static/dist')
+    path.join(__dirname, '../public')
   ]
   nunjucks.configure(viewsPaths, {
     noCache: process.env.NODE_ENV !== 'production',
@@ -26,7 +26,7 @@ module.exports = async function start ({
     express: app
   })
 
-  const staticPath = path.join(__dirname, 'static/dist')
+  const staticPath = path.join(__dirname, '../public')
   app.use(express.static(staticPath))
 
   app.use(helmet())
