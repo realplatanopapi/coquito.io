@@ -85,6 +85,20 @@ h3 {
   font-size: 1.2em;
 }
 
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-top: 1em;
+}
+
+li:first-child {
+  margin-top: 0;
+}
+
 a {
   border-bottom: 1px solid currentColor;
   color: inherit;
@@ -141,4 +155,30 @@ a:hover {
 .post-header-subtitle {
   font-size: 1.2em;
   margin-top: 0.5rem;
+}
+
+.post-list {
+  list-style-type: none;
+}
+
+.post-list-item {
+  margin-top: 3em;
+}
+
+.post-list-item:first-child {
+  margin-top: 0;
+}
+
+.post-list-item-link {
+  font-size: 1.1em;
+}
+
+.post-list-item-date {
+  display: block;
+  margin-top: 0.5em;
+  opacity: 0.5;
+}
+
+.post-list-item-subtitle {
+  margin-top: 0.5em;
 }

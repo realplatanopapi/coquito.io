@@ -5,10 +5,14 @@
     <h1 class="header-title">coquito.io</h1>
     <p class="header-subtitle">A blog by <a href="https://mariopabon.com">Mario Pabon</a> (aka <a href="https://twitter.com/realplatanopapi">@realplatanopapi</a>) on the human aspects of building products.</p>
   </header>
-  <ul>
+  <ul class="post-list">
     {% for post in posts %}
-      <li>
-        <a href="/{{post.slug}}">{{post.meta.title}}</a>
+      <li class="post-list-item">
+        <a class="post-list-item-link" href="/{{post.slug}}">{{post.meta.title}}</a>
+        <time class="post-list-item-date" datetime="{{ post.meta.date }}">{{ post.meta.dateFormatted }}</time>
+        {% if post.meta.subtitle %}
+          <p class="post-list-item-subtitle">{{ post.meta.subtitle }}</p>
+        {% endif %}
       </li>
     {% endfor %}
   </ul>
