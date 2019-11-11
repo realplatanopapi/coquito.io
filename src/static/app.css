@@ -113,6 +113,12 @@ a:hover {
   padding-bottom: 0;
 }
 
+.nav {
+  left: 1rem;
+  position: fixed;
+  top: 1rem;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
