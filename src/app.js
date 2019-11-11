@@ -16,12 +16,18 @@ module.exports = async function start ({
 
   const app = express()
 
-  const viewsPath = path.join(__dirname, 'views')
-  nunjucks.configure(viewsPath, {
-    noCache: process.env.NODE_ENV === 'development',
+  const viewsPaths = [
+    path.join(__dirname, 'views'),
+    path.join(__dirname, 'static/dist')
+  ]
+  nunjucks.configure(viewsPaths, {
+    noCache: process.env.NODE_ENV !== 'production',
     autoescape: true,
     express: app
   })
+
+  const staticPath = path.join(__dirname, 'static/dist')
+  app.use(express.static(staticPath))
 
   app.use(helmet())
 
