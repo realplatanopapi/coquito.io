@@ -1,5 +1,9 @@
 {% extends "../static/dist/_base.html" %}
 
+{% block title %}
+  {{ post.meta.title }}
+{% endblock %}
+
 {% block body %}
   <nav class="nav">
     <a class="nav-link" href="/">coquito.io</a>
